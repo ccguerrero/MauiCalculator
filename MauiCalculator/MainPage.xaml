@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="20,0"
+            VerticalOptions="Center">
+            <Label
+                Text="Calculator"
+                FontSize="32"
+                HorizontalOptions="Center"/>
+            <Entry x:Name="entryNum1"
+                   Placeholder="Enter Number"
+                   Keyboard="Numeric"
+                   TextChanged="entryNum1_TextChanged"/>
+            <Entry x:Name="entryNum2"
+                   Placeholder="Enter Number"
+                   Keyboard="Numeric"
+                   TextChanged="entryNum2_TextChanged"/>
+            <Label
+                x:Name="txtResult"
+                Text="Result"/>
+            <Button
+                x:Name="btnAdd"
+                Text="➕"
+                FontSize="30"
+                Clicked="btnAdd_Clicked"/>
+            <Button
+                x:Name="btnSubstract"
+                Text="➖"
+                FontSize="30"
+                Clicked="btnSubstract_Clicked"/>
+            <Button
+                x:Name="btnMultiply"
+                Text="x"
+                FontSize="30"
+                Clicked="btnMultiply_Clicked"/>
+            <Button
+                x:Name="btnDivide"
+                Text="➗"
+                FontSize="30"
+                Clicked="btnDivide_Clicked"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
