@@ -8,10 +8,10 @@
             Spacing="10"
             Padding="20,0"
             VerticalOptions="Center">
-            <Label
+            <!--<Label
                 Text="Calculator"
                 FontSize="32"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"/>-->
             <Entry x:Name="entryNum1"
                    Placeholder="Enter Number"
                    Keyboard="Numeric"
@@ -25,23 +25,23 @@
                 Text="Result"/>
             <Button
                 x:Name="btnAdd"
-                Text="➕"
-                FontSize="30"
+                Text="&#43;"
+                FontSize="50"
                 Clicked="btnAdd_Clicked"/>
             <Button
                 x:Name="btnSubstract"
-                Text="➖"
-                FontSize="30"
+                Text="&#8722;"
+                FontSize="50"
                 Clicked="btnSubstract_Clicked"/>
             <Button
                 x:Name="btnMultiply"
-                Text="x"
-                FontSize="30"
+                Text="&#215;"
+                FontSize="50"
                 Clicked="btnMultiply_Clicked"/>
             <Button
                 x:Name="btnDivide"
-                Text="➗"
-                FontSize="30"
+                Text="&#247;"
+                FontSize="50"
                 Clicked="btnDivide_Clicked"/>
             
         </VerticalStackLayout>

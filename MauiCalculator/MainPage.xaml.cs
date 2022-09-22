@@ -1,5 +1,30 @@
-﻿namespace MauiCalculator;
+﻿using MauiCalculator;
 
+namespace MauiCalculator;
+
+class InputValidate
+{
+	public static double GetInput(string numText)
+	{
+		double TempNum = 0;
+
+		if (numText != null)
+		{
+			if (double.TryParse(numText, out TempNum))
+			{
+				return TempNum; //correct number!!
+			}
+			else
+			{
+				return 0;
+			}
+		}
+		else
+		{
+			return 0;
+		}
+		}
+	}
 public partial class MainPage : ContentPage
 {
 	int count = 0;
@@ -21,22 +46,34 @@ public partial class MainPage : ContentPage
 
 	private void btnAdd_Clicked(object sender, EventArgs e)
 	{
-
+		double Num1 = InputValidate.GetInput(entryNum1.Text);
+		double Num2 = InputValidate.GetInput(entryNum2.Text);
+		double Result = Num1 + Num2;
+		txtResult.Text = Convert.ToString(Result);
 	}
 
 	private void btnSubstract_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        double Num1 = InputValidate.GetInput(entryNum1.Text);
+        double Num2 = InputValidate.GetInput(entryNum2.Text);
+        double Result = Num1 - Num2;
+        txtResult.Text = Convert.ToString(Result);
+    }
 
 	private void btnMultiply_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        double Num1 = InputValidate.GetInput(entryNum1.Text);
+        double Num2 = InputValidate.GetInput(entryNum2.Text);
+        double Result = Num1 * Num2;
+        txtResult.Text = Convert.ToString(Result);
+    }
 
 	private void btnDivide_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        double Num1 = InputValidate.GetInput(entryNum1.Text);
+        double Num2 = InputValidate.GetInput(entryNum2.Text);
+        double Result = Num1 / Num2;
+        txtResult.Text = Convert.ToString(Result);
+    }
 }
 
