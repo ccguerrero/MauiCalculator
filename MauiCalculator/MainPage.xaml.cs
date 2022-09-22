@@ -33,16 +33,44 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+	public string correctNum1="";
+	public string correctNum2="";
 
 	private void entryNum1_TextChanged(object sender, TextChangedEventArgs e)
 	{
-
+		double NumTemp = 0;
+		if(double.TryParse(entryNum1.Text, out NumTemp))
+		{
+			correctNum1 = entryNum1.Text;  // correct number!!!
+		}
+		else
+		{
+			entryNum1.CursorPosition=correctNum1.Length;
+			int selectionLength = e.NewTextValue.Length - correctNum1.Length;
+			if (selectionLength > 0)
+			{
+				entryNum1.SelectionLength = selectionLength;
+			}
+		}
 	}
 
 	private void entryNum2_TextChanged(object sender, TextChangedEventArgs e)
 	{
-
-	}
+        double NumTemp = 0;
+        if (double.TryParse(entryNum2.Text, out NumTemp))
+        {
+            correctNum2 = entryNum2.Text;  // correct number!!!
+        }
+        else
+        {
+            entryNum2.CursorPosition = correctNum2.Length;
+            int selectionLength = e.NewTextValue.Length - correctNum2.Length;
+            if (selectionLength > 0)
+            {
+                entryNum2.SelectionLength = selectionLength;
+            }
+        }
+    }
 
 	private void btnAdd_Clicked(object sender, EventArgs e)
 	{
