@@ -6,7 +6,7 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="10"
-            Padding="20,0"
+            Padding="40,0"
             VerticalOptions="Center">
             <!--<Label
                 Text="Calculator"
@@ -23,27 +23,35 @@
             <Label
                 x:Name="txtResult"
                 Text="Result"/>
-            <Button
-                x:Name="btnAdd"
-                Text="&#43;"
-                FontSize="50"
-                Clicked="btnAdd_Clicked"/>
-            <Button
-                x:Name="btnSubstract"
-                Text="&#8722;"
-                FontSize="50"
-                Clicked="btnSubstract_Clicked"/>
-            <Button
-                x:Name="btnMultiply"
-                Text="&#215;"
-                FontSize="50"
-                Clicked="btnMultiply_Clicked"/>
-            <Button
-                x:Name="btnDivide"
-                Text="&#247;"
-                FontSize="50"
-                Clicked="btnDivide_Clicked"/>
-            
+            <HorizontalStackLayout
+                Spacing="20"
+                HorizontalOptions="CenterAndExpand">
+                <Button
+                    Padding="25,0"
+                    x:Name="btnAdd"
+                    Text="&#43;"
+                    FontSize="50"
+                    Clicked="btnAdd_Clicked"/>
+                <Button
+                    Padding="25,0"
+                    x:Name="btnSubstract"
+                    Text="&#8722;"
+                    FontSize="50"
+                    Clicked="btnSubstract_Clicked"/>
+                <Button
+                    Padding="25,0"
+                    x:Name="btnMultiply"
+                    Text="&#215;"
+                    FontSize="50"
+                    Clicked="btnMultiply_Clicked"/>
+                <Button
+                    Padding="25,0"
+                    x:Name="btnDivide"
+                    Text="&#247;"
+                    FontSize="50"
+                    Clicked="btnDivide_Clicked"/>
+            </HorizontalStackLayout>
+
         </VerticalStackLayout>
     </ScrollView>
 

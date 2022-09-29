@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+	}	
 	public string correctNum1="";
 	public string correctNum2="";
 
@@ -57,15 +57,15 @@ public partial class MainPage : ContentPage
 	private void entryNum2_TextChanged(object sender, TextChangedEventArgs e)
 	{
         double NumTemp = 0;
-        if (double.TryParse(entryNum2.Text, out NumTemp))
-        {
-            correctNum2 = entryNum2.Text;  // correct number!!!
-        }
-        else
+		if (double.TryParse(entryNum2.Text, out NumTemp))
+		{
+			correctNum2 = entryNum2.Text;  // correct number!!!
+		}
+		else
         {
             entryNum2.CursorPosition = correctNum2.Length;
             int selectionLength = e.NewTextValue.Length - correctNum2.Length;
-            if (selectionLength > 0)
+            if (selectionLength >= 0)
             {
                 entryNum2.SelectionLength = selectionLength;
             }
