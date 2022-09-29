@@ -4,7 +4,7 @@ namespace MauiCalculator;
 
 class InputValidate
 {
-	public static double GetInput(string numText)
+	public static double GetInput(string numText) //Validate that inputs are not empty to avoid zero div
 	{
 		double TempNum = 0;
 
@@ -27,7 +27,7 @@ class InputValidate
 	}
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	int count = 0; //Clicker counter use for easter egg
 
 	public MainPage()
 	{
@@ -101,6 +101,23 @@ public partial class MainPage : ContentPage
         double Num1 = InputValidate.GetInput(entryNum1.Text);
         double Num2 = InputValidate.GetInput(entryNum2.Text);
         double Result = Num1 / Num2;
+        txtResult.Text = Convert.ToString(Result);
+    }
+    private void btnSqr_Clicked(object sender, EventArgs e)
+    {
+		count++;
+		if (count == 5)
+		{
+			myName.Text = "Cuauhtemoc";
+			count = 0;
+		}
+		else
+			myName.Text = "";
+			
+	//	SemanticScreenReader.Announce(myName.Text);
+			
+        double Num1 = InputValidate.GetInput(entryNum1.Text);
+        double Result = Num1 * Num1;
         txtResult.Text = Convert.ToString(Result);
     }
 }

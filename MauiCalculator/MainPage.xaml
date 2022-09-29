@@ -8,10 +8,11 @@
             Spacing="10"
             Padding="40,0"
             VerticalOptions="Center">
-            <!--<Label
-                Text="Calculator"
+            <!--Empty Label to show name after clicking 5 times the Sqr button-->
+            <Label
+                x:Name="myName"
                 FontSize="32"
-                HorizontalOptions="Center"/>-->
+                HorizontalOptions="Center"/>
             <Entry x:Name="entryNum1"
                    Placeholder="Enter Number"
                    Keyboard="Numeric"
@@ -23,6 +24,7 @@
             <Label
                 x:Name="txtResult"
                 Text="Result"/>
+            <!--Horizontal Stack for all basic operations, 4 buttons-->
             <HorizontalStackLayout
                 Spacing="20"
                 HorizontalOptions="CenterAndExpand">
@@ -50,6 +52,16 @@
                     Text="&#247;"
                     FontSize="50"
                     Clicked="btnDivide_Clicked"/>
+            </HorizontalStackLayout>
+            <!--Extra horizontal stack to show centered srq button-->
+            <HorizontalStackLayout
+                Spacing="20"
+                HorizontalOptions="CenterAndExpand">
+                <Button
+                    x:Name="btnSqr"
+                    Text="Sqr"
+                    FontSize="40"
+                    Clicked="btnSqr_Clicked"/>
             </HorizontalStackLayout>
 
         </VerticalStackLayout>
